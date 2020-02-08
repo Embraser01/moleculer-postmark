@@ -1,0 +1,53 @@
+{
+  "name": "moleculer-postmark",
+  "version": "0.0.0",
+  "description": "Moleculer wrapper for postmark",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon examples/index.js",
+    "ci": "jest --watch",
+    "test": "jest --coverage",
+    "lint": "eslint --ext=.js src test",
+    "coverall": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "keywords": [
+    "moleculer",
+    "microservice",
+    "postmark"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/embraser01/moleculer-postmark.git"
+  },
+  "author": "Marc-Antoine Fernandes",
+  "license": "MIT",
+  "peerDependencies": {
+    "moleculer": "^0.13.0"
+  },
+  "devDependencies": {
+    "benchmarkify": "^2.1.2",
+    "coveralls": "^3.0.9",
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0",
+    "jest-cli": "^25.1.0",
+    "moleculer": "^0.13.0",
+    "nodemon": "^2.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "rootDir": "./src",
+    "roots": [
+      "../test"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/services/"
+    ]
+  },
+  "engines": {
+    "node": ">= 10.x.x"
+  },
+  "dependencies": {
+    "postmark": "^2.3.5"
+  }
+}
